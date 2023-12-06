@@ -1,0 +1,41 @@
+.Field {
+  width: 480px;
+  height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Cell {
+  width: 12.5%;
+  height: 12.5%;
+  background-color: darken($color: #000000, $amount: 0);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font: 30px bold;
+  &.black {
+    background-color: #b58863;
+  }
+  &.white {
+    background-color: #f0d9b5;
+  }
+  &.moveable {
+    ::after {
+      content: " ";
+      background-color: #000000;
+      width: 10px;
+      height: 10px;
+      border: 50%;
+    }
+  }
+}
+.Figure {
+  cursor: pointer;
+  &.black {
+    color: black;
+  }
+  &.white {
+    color: white;
+  }
+}
